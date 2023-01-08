@@ -1,40 +1,72 @@
-// const operatorTemp = prompt("Please enter the desired operator: ");
-// const x = parseInt(prompt("Please enter first number: "));
-// const y = parseInt(prompt("Please enter second number: "));
-const operator = operatorTemp.toLowerCase();
+let displayVariable = "";
+const display = document.querySelector("#display");
+const numButtons = document.querySelector(".num-buttons");
+const operatorButtons = document.querySelector(".operator-buttons");
+const clearButton = document.querySelector("#clear");
+const equalsButton = document.querySelector("#equals");
 
-operate();
+numButtons.addEventListener("click", (e) => {
+  display.textContent += e.target.textContent;
+  displayVariable += e.target.textContent;
+});
+
+operatorButtons.addEventListener("click", (e) => {
+  display.textContent += e.target.textContent;
+  displayVariable += e.target.textContent;
+});
+
+clearButton.addEventListener("click", (e) => {
+  display.textContent = "";
+  displayVariable = "";
+});
+
+equalsButton.addEventListener("click", (e) => {
+  operate();
+});
 
 function operate() {
-  if (operator === "add") {
-    add();
-  } else if (operator === "subtract") {
-    subtract();
-  } else if (operator === "multiply") {
-    multiply();
-  } else if (operator === "divide") {
-    divide();
+  displayVariable = displayVariable.replace("+", " + ");
+  displayVariable = displayVariable.replace("-", " - ");
+  displayVariable = displayVariable.replace("X", " * ");
+  displayVariable = displayVariable.replace("÷", " / ");
+
+  if (displayVariable.includes("+")) {
+    const [x, y] = displayVariable.split(" + ");
+    add(x, y);
+  } else if (displayVariable.includes("-")) {
+    const [x, y] = displayVariable.split(" - ");
+    subtract(x, y);
+  } else if (displayVariable.includes("*")) {
+    const [x, y] = displayVariable.split(" * ");
+    multiply(x, y);
+  } else if (displayVariable.includes("/")) {
+    const [x, y] = displayVariable.split(" / ");
+    divide(x, y);
   } else {
-    console.log("Please enter a valid operator");
+    console.log("Error");
   }
 }
 
-function add() {
-  const total = x + y;
-  console.log(total);
+function add(x, y) {
+  const total = +x + +y;
+  display.textContent = "";
+  display.textContent += total;
 }
 
-function subtract() {
-  const total = x - y;
-  console.log(total);
+function subtract(x, y) {
+  const total = +x - +y;
+  display.textContent = "";
+  display.textContent += total;
 }
 
-function multiply() {
-  const total = x * y;
-  console.log(total);
+function multiply(x, y) {
+  const total = +x * +y;
+  display.textContent = "";
+  display.textContent += total;
 }
 
-function divide() {
-  const total = x / y;
-  console.log(total);
+function divide(x, y) {
+  const total = +x / +y;
+  display.textContent = "";
+  display.textContent += total;
 }
