@@ -50,7 +50,7 @@ function operate() {
   displayVariable = displayVariable.replace("+", " + ");
   displayVariable = displayVariable.replace("-", " - ");
   displayVariable = displayVariable.replace("X", " * ");
-  displayVariable = displayVariable.replace("÷", " / ");
+  displayVariable = displayVariable.replace("/", " / ");
 
   if (displayVariable.includes("+")) {
     const [x, y] = displayVariable.split(" + ");
