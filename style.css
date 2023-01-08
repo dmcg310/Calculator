@@ -1,0 +1,28 @@
+body {
+  background-color: #0f1a20;
+}
+
+button {
+  text-align: left;
+  background-color: #f42c04;
+  padding: 30px;
+  font-size: 20px;
+  color: white;
+  border: 0;
+  border-radius: 10%;
+}
+
+.buttons {
+  border: 2px solid #ada296;
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+  gap: 20px;
+  padding: 20px 0px 20px 0px;
+}
+
+.buttons > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}

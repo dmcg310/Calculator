@@ -1,6 +1,6 @@
-const operatorTemp = prompt("Please enter the desired operator: ");
-const x = parseInt(prompt("Please enter first number: "));
-const y = parseInt(prompt("Please enter second number: "));
+// const operatorTemp = prompt("Please enter the desired operator: ");
+// const x = parseInt(prompt("Please enter first number: "));
+// const y = parseInt(prompt("Please enter second number: "));
 const operator = operatorTemp.toLowerCase();
 
 operate();
