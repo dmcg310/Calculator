@@ -1,16 +1,32 @@
 let displayVariable = "";
+
 const display = document.querySelector("#display");
-const numButtons = document.querySelector(".num-buttons");
-const operatorButtons = document.querySelector(".operator-buttons");
+
+const buttons2 = document.querySelector(".button-row2");
+const button3 = document.querySelector(".button-row3");
+const button4 = document.querySelector(".button-row4");
+const button5 = document.querySelector(".button-row5");
+
 const clearButton = document.querySelector("#clear");
 const equalsButton = document.querySelector("#equals");
+const backspaceButton = document.querySelector("#backspace");
 
-numButtons.addEventListener("click", (e) => {
+buttons2.addEventListener("click", (e) => {
   display.textContent += e.target.textContent;
   displayVariable += e.target.textContent;
 });
 
-operatorButtons.addEventListener("click", (e) => {
+button3.addEventListener("click", (e) => {
+  display.textContent += e.target.textContent;
+  displayVariable += e.target.textContent;
+});
+
+button4.addEventListener("click", (e) => {
+  display.textContent += e.target.textContent;
+  displayVariable += e.target.textContent;
+});
+
+button5.addEventListener("click", (e) => {
   display.textContent += e.target.textContent;
   displayVariable += e.target.textContent;
 });
@@ -20,7 +36,13 @@ clearButton.addEventListener("click", (e) => {
   displayVariable = "";
 });
 
+backspaceButton.addEventListener("click", (e) => {
+  display.textContent = display.textContent.slice(0, -1);
+  displayVariable = displayVariable.slice(0, -1);
+});
+
 equalsButton.addEventListener("click", (e) => {
+  display.textContent = "";
   operate();
 });
 
@@ -69,4 +91,5 @@ function divide(x, y) {
   const total = +x / +y;
   display.textContent = "";
   display.textContent += total;
+  console.log(total);
 }

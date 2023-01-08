@@ -10,32 +10,42 @@
   </head>
   <body>
     <div id="container">
+      <h1>Calculator</h1>
       <div class="calculator">
         <div id="display"></div>
-        <div class="buttons">
-          <div class="num-buttons">
-            <button type="submit" id="one">1</button>
-            <button type="submit" id="two">2</button>
-            <button type="submit" id="three">3</button>
-            <button type="submit" id="four">4</button>
-            <button type="submit" id="five">5</button>
-            <button type="submit" id="six">6</button>
+        <div class="buttons-layout">
+          <div class="button-row1">
+            <button type="submit" id="clear">C</button>
+            <button type="submit" id="backspace">del</button>
+          </div>
+
+          <div class="button-row2">
             <button type="submit" id="seven">7</button>
             <button type="submit" id="eight">8</button>
             <button type="submit" id="nine">9</button>
-            <button type="submit" id="zero">0</button>
+            <button type="submit" id="divide">/</button>
           </div>
 
-          <div class="operator-buttons">
-            <button type="submit" id="subtract" style="padding-left: 40px">-</button>
-            <button type="submit" id="divide">÷</button>
+          <div class="button-row3">
+            <button type="submit" id="four">4</button>
+            <button type="submit" id="five">5</button>
+            <button type="submit" id="six">6</button>
             <button type="submit" id="multiply">X</button>
-            <button type="submit" id="backspace">⌫</button>
-
-            <button type="submit" id="addition" style="padding-left: 32px">+</button>
           </div>
-          <button type="submit" id="equals">=</button>
-          <button type="submit" id="clear">C</button>
+
+          <div class="button-row4">
+            <button type="submit" id="one">1</button>
+            <button type="submit" id="two">2</button>
+            <button type="submit" id="three">3</button>
+            <button type="submit" id="subtract">-</button>
+          </div>
+
+          <div class="button-row5">
+            <button type="submit" id="decimal">.</button>
+            <button type="submit" id="zero">0</button>
+            <button type="submit" id="equals">=</button>
+            <button type="submit" id="addition">+</button>
+          </div>
         </div>
       </div>
     </div>
