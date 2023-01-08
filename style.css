@@ -48,6 +48,9 @@ h1 {
   height: 75px;
   width: 335px;
   padding: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .calculator {
