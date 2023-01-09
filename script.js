@@ -122,3 +122,60 @@ function crazy(total) {
     }
   });
 }
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "1") {
+    display.textContent += e.key;
+    displayVariable += e.key;
+  } else if (e.key === "2") {
+    display.textContent += e.key;
+    displayVariable += e.key;
+  } else if (e.key === "3") {
+    display.textContent += e.key;
+    displayVariable += e.key;
+  } else if (e.key === "4") {
+    display.textContent += e.key;
+    displayVariable += e.key;
+  } else if (e.key === "5") {
+    display.textContent += e.key;
+    displayVariable += e.key;
+  } else if (e.key === "6") {
+    display.textContent += e.key;
+    displayVariable += e.key;
+  } else if (e.key === "7") {
+    display.textContent += e.key;
+    displayVariable += e.key;
+  } else if (e.key === "8") {
+    display.textContent += e.key;
+    displayVariable += e.key;
+  } else if (e.key === "9") {
+    display.textContent += e.key;
+    displayVariable += e.key;
+  } else if (e.key === "0") {
+    display.textContent += e.key;
+    displayVariable += e.key;
+  } else if (e.key === "+") {
+    display.textContent += e.key;
+    displayVariable += e.key;
+  } else if (e.key === "-") {
+    display.textContent += e.key;
+    displayVariable += e.key;
+  } else if (e.key === "*") {
+    display.textContent += "X";
+    displayVariable += "X";
+  } else if (e.key === "/") {
+    display.textContent += e.key;
+    displayVariable += e.key;
+  } else if (e.key === ".") {
+    display.textContent += e.key;
+    displayVariable += e.key;
+  } else if (e.key === "Backspace") {
+    display.textContent = display.textContent.slice(0, -1);
+    displayVariable = displayVariable.slice(0, -1);
+  } else if (e.key === "Enter" || e.key === "=") {
+    evaluation();
+  } else if (e.key === "c") {
+    display.textContent = "";
+    displayVariable = "";
+  }
+});
