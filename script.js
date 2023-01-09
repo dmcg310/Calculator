@@ -31,6 +31,7 @@ zeroButton.addEventListener("click", (e) => {
   display.textContent += e.target.textContent;
   displayVariable += e.target.textContent;
 });
+
 const additionButton = document.querySelector("#addition");
 additionButton.addEventListener("click", (e) => {
   display.textContent += e.target.textContent;
@@ -45,7 +46,7 @@ clearButton.addEventListener("click", (e) => {
 
 const equalsButton = document.querySelector("#equals");
 equalsButton.addEventListener("click", (e) => {
-  operate();
+  evaluation();
 });
 
 const backspaceButton = document.querySelector("#backspace");
@@ -54,7 +55,7 @@ backspaceButton.addEventListener("click", (e) => {
   displayVariable = displayVariable.slice(0, -1);
 });
 
-function operate() {
+function evaluation() {
   displayVariable = displayVariable.replace("+", " + ");
   displayVariable = displayVariable.replace("-", " - ");
   displayVariable = displayVariable.replace("X", " * ");
@@ -62,42 +63,25 @@ function operate() {
 
   if (displayVariable.includes("+")) {
     const [x, y] = displayVariable.split(" + ");
-    add(x, y);
+    let total = +x + +y;
+    display.textContent = "";
+    display.textContent += total;
   } else if (displayVariable.includes("-")) {
     const [x, y] = displayVariable.split(" - ");
-    subtract(x, y);
+    let total = +x - +y;
+    display.textContent = "";
+    display.textContent += total;
   } else if (displayVariable.includes("*")) {
     const [x, y] = displayVariable.split(" * ");
-    multiply(x, y);
+    let total = +x * +y;
+    display.textContent = "";
+    display.textContent += total;
   } else if (displayVariable.includes("/")) {
-    const [x, y] = displayVariable.split(" / ");
-    divide(x, y);
+    let [x, y] = displayVariable.split(" / ");
+    let total = +x / +y;
+    display.textContent = "";
+    display.textContent += total;
   } else {
     console.log("Error");
   }
-}
-
-function add(x, y) {
-  const total = +x + +y;
-  display.textContent = "";
-  display.textContent += total;
-}
-
-function subtract(x, y) {
-  const total = +x - +y;
-  display.textContent = "";
-  display.textContent += total;
-}
-
-function multiply(x, y) {
-  const total = +x * +y;
-  display.textContent = "";
-  display.textContent += total;
-}
-
-function divide(x, y) {
-  const total = +x / +y;
-  display.textContent = "";
-  display.textContent += total;
-  console.log(total);
 }

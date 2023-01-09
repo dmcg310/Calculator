@@ -31,6 +31,22 @@ h1 {
   margin: 0;
 }
 
+#equals,
+#clear {
+  background-color: #06d6a0;
+}
+
+#backspace {
+  background-color: #984447;
+}
+
+#addition,
+#multiply,
+#subtract,
+#divide {
+  background-color: #add9f4;
+}
+
 #container {
   display: flex;
   flex-direction: column;
