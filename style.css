@@ -93,3 +93,8 @@ h1 {
 .button-row1 > button {
   width: 140px;
 }
+
+.footer {
+  padding-top: 5px;
+  text-align: center;
+}
