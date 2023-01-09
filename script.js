@@ -66,22 +66,59 @@ function evaluation() {
     let total = +x + +y;
     display.textContent = "";
     display.textContent += total;
+    crazy(total);
   } else if (displayVariable.includes("-")) {
     const [x, y] = displayVariable.split(" - ");
     let total = +x - +y;
     display.textContent = "";
     display.textContent += total;
+    crazy(total);
   } else if (displayVariable.includes("*")) {
     const [x, y] = displayVariable.split(" * ");
     let total = +x * +y;
     display.textContent = "";
     display.textContent += total;
+    crazy(total);
   } else if (displayVariable.includes("/")) {
     let [x, y] = displayVariable.split(" / ");
     let total = +x / +y;
     display.textContent = "";
     display.textContent += total;
+    crazy(total);
   } else {
     console.log("Error");
   }
+}
+
+function crazy(total) {
+  display.textContent = "";
+  display.textContent += total;
+  displayVariable = total;
+  const equalsButton = document.querySelector("#equals");
+  equalsButton.addEventListener("click", (e) => {
+    if (displayVariable.includes("+")) {
+      const [x, y] = displayVariable.split(" + ");
+      let total = +x + +y;
+      display.textContent = "";
+      display.textContent += total;
+    } else if (displayVariable.includes("-")) {
+      const [x, y] = displayVariable.split(" - ");
+      let total = +x - +y;
+      display.textContent = "";
+      display.textContent += total;
+    } else if (displayVariable.includes("*")) {
+      const [x, y] = displayVariable.split(" * ");
+      let total = +x * +y;
+      display.textContent = "";
+      display.textContent += total;
+    } else if (displayVariable.includes("/")) {
+      let [x, y] = displayVariable.split(" / ");
+      let total = +x / +y;
+      display.textContent = "";
+      display.textContent += total;
+      crazy(total);
+    } else {
+      console.log("Error");
+    }
+  });
 }

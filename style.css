@@ -33,18 +33,18 @@ h1 {
 
 #equals,
 #clear {
-  background-color: #06d6a0;
+  background-color: #44af69;
 }
 
 #backspace {
-  background-color: #984447;
+  background-color: #f8333c;
 }
 
 #addition,
 #multiply,
 #subtract,
 #divide {
-  background-color: #add9f4;
+  background-color: #fcab10;
 }
 
 #container {
@@ -67,6 +67,7 @@ h1 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  box-shadow: 0 0 5px #000000 inset;
 }
 
 .calculator {
@@ -75,10 +76,11 @@ h1 {
   align-items: center;
   justify-content: space-between;
   border: 5px outset;
-  background-color: #2892d7;
+  background-color: #2b9eb3;
   width: 375px;
   height: 475px;
   padding: 25px;
+  box-shadow: 0 0 15px #000000;
 }
 
 .buttons-layout {
